@@ -27,10 +27,10 @@ export function TranslationProvider({ children }: TranslationProviderProps) {
   // Default language
   const [language, setLanguage] = useState<string>('en');
   const [translations, setTranslations] = useState<Record<string, string>>(
-    enjson
+    language == 'en' ? enjson : mnjson
   );
 
-//   // Function to change the language
+  //   // Function to change the language
   const changeLanguage = (newLanguage: string) => {
     setLanguage(newLanguage);
     setTranslations(newLanguage === 'en' ? enjson : mnjson)

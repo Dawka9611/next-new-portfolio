@@ -2,10 +2,8 @@
 import styled from 'styled-components'
 import '@/styles/globals.css'
 import type { Metadata } from 'next'
-import NavBar from '@/components/NavBar'
 import { TranslationProvider } from '@/utils/context/Translation.context'
-// import { I18nextProvider } from 'react-i18next'
-// import i18n from '@/utils/i18n'
+import NavBar from '@/components/NavBar'
 
 export const metadata: Metadata = {
   title: 'Dawka Protfolio',
@@ -17,18 +15,17 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  
   return (
     <html lang="en">
       <body className='w-full min-h-screen flex justify-center items-start bg-dark p-5 text-gray-100 scroll-smooth'>
         <TranslationProvider>
-        {/* <I18nextProvider i18n={i18n}> */}
-          <PageStyle className='childrenCntr flex justify-center items-center box-border w-5/6 rounded-2xl'>
+          <PageStyle className='childrenCntr flex justify-center items-center box-border w-5/6 h-[100vh] rounded-2xl'>
             <div className="blackBox bg-primaryDark rounded-2xl absolute z-10 p-5" >
               <NavBar />
               {children}
             </div>
           </PageStyle>
-          {/* </I18nextProvider> */}
         </TranslationProvider>
       </body>
     </html>
@@ -36,8 +33,7 @@ export default function RootLayout({
 }
 
 const PageStyle = styled.div`
-        min-height: 350px;
-        max-width: min(100%, 1256px);
+        max-width: min(100%, 1400px);
         position: relative;
         background-color: ${p => p.theme.mainColorDarker};
         overflow: hidden;

@@ -1,5 +1,9 @@
 {
     "home": "Home",
     "about": "About",
-    "projects": "Projects"
+    "projects": "Projects",
+    "skills": "Skills",
+    "homeDesc": "Turning Vision Into Reality With Code and Design",
+    "helloText": "Hello, I'm Davaadulam Ulziikhutag",
+    "developerText": "Frontend Developer"
 }
