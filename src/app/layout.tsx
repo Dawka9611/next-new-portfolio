@@ -4,6 +4,7 @@ import '@/styles/globals.css'
 import type { Metadata } from 'next'
 import { TranslationProvider } from '@/utils/context/Translation.context'
 import NavBar from '@/components/NavBar'
+import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
   title: 'Dawka Protfolio',
@@ -15,76 +16,77 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-  
+
   return (
     <html lang="en">
-      <body className='w-full min-h-screen flex justify-center items-start bg-dark p-5 text-gray-100 scroll-smooth'>
-        <TranslationProvider>
-          <PageStyle className='childrenCntr flex justify-center items-center box-border w-5/6 h-[100vh] rounded-2xl'>
-            <div className="blackBox bg-primaryDark rounded-2xl absolute z-10 p-5" >
-              <NavBar />
-              {children}
+      <TranslationProvider>
+        <body className='w-full min-h-screen  flex justify-center items-start bg-dark p-10 text-gray-100 scroll-smooth relative'>
+          <PageStyle className='box-border w-5/6 overflow-hidden  rounded-2xl relative'>
+            <NavBar />
+            {children}
+            <div className='pt-20'>
+              <Footer />
             </div>
+            {/* </div> */}
           </PageStyle>
-        </TranslationProvider>
-      </body>
+        </body>
+      </TranslationProvider>z
     </html>
   )
 }
 
 const PageStyle = styled.div`
-        max-width: min(100%, 1400px);
-        position: relative;
+        max-width: min(100%, 1500px);
+        height: fit-content;
         background-color: ${p => p.theme.mainColorDarker};
-        overflow: hidden;
         &::before{
             content: "";
-            width:100%;
-            min-height: 100%;
+            width:200%;
+            min-height: 200%;
             position: absolute;
             background: linear-gradient(0deg, transparent, rgb(15, 156, 161)); 
-            top: -50%;
-            left: -50%;
+            top: -60%;
+            left: -60%;
             transform-origin: bottom right;
             animation: animate 6s linear infinite;
         }
-        &::after{
-            content: "";
-            width: 100%;
-            position: absolute;
-            background: linear-gradient(0deg, transparent, rgb(15, 156, 161)); 
-            top: -50%;
-            left: -50%;
-            transform-origin: bottom left;
-            animation: animate 6s linear infinite;
-            animation-delay: -1s;
-        }
-        .blackBox{
-          inset: 2px;
-        }
-  
+
     @keyframes animate {
         0%{
             transform: rotate(0deg);
         }
         100%{
-            transform: rotate(360deg);
+            transform: rotate(220deg);
         }
     }
-    .main{
-      width: 170px;
-      height: 170px;
-      .navigation{
-        width: 40px;
-        height: 40px;
-        transition: 0.5s;
-        span{
-          --i: '0';
-          --x: '-1';
-          --y: '0';
-          height: 7px;
-          width: 7px;
+    .fontAnton{
+      font-family: Antonio;
+    }
+    .whiteFrame{
+      width: 100%;
+
+      &::before{
+            content: "";
+            width:100%;
+            min-height: 99%;
+            position: absolute;
+            background: linear-gradient(0deg, transparent, white); 
+            top: -50%;
+            left: -50%;
+            transform-origin: bottom right;
+            animation: animate 6s linear infinite;
         }
-      }
+        &::before{
+            content: "";
+            width:100%;
+            min-height: 100%;
+            position: absolute;
+            background: linear-gradient(0deg, transparent, white); 
+            top: -60%;
+            left: -60%;
+            transform-origin: bottom right;
+            animation: animate 6s linear infinite;
+            animation-delay: -2s;
+        }
     }
 `

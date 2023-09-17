@@ -1,36 +1,50 @@
-"use client"
-import { useEffect } from 'react'
-import styled from 'styled-components'
+import React from 'react';
+import { motion } from 'framer-motion'
 
-const AnimatedText = () => {
-    return <div className=''>
-        Frontend Developer ...
-    </div>
+const quote = {
+    initial: {
+        opacity: 1,
+    },
+    animate: {
+        opacity: 1,
+        transition: {
+            delay: 0.5,
+            staggerChildren: 0.08,
+        }
+    }
 }
 
-export default AnimatedText
-
-const TextStyle = styled.div`
-  /* overflow: hidden;  */
-  max-width: 200px;
-  /* border-right: .15em solid orange;  */
-  /* white-space: nowrap; */
-  font-family: 'Open Sans', sans-serif;
-  /* margin: 0 auto;  */
-  letter-spacing: .15em; 
-  animation: 
-    typing 3.5s steps(40, end),
-    blink-caret .75s step-end infinite;
-
-/* The typing effect */
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
+const singleWord = {
+    initial: {
+        opacity: 0,
+        y:50
+    },
+    animate: {
+        opacity: 1,
+        y:0,
+        transition: {
+            duration:1
+        }
+    }
 }
 
-/* The typewriter cursor effect */
-@keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: orange; }
+interface AnimatedTextProps {
+    text: string,
+    className: string
 }
-`
+
+const AnimatedText: React.FC<AnimatedTextProps> = ({ text, className }) => {
+    return (
+        <div className='fontAnton w-full mx-auto py-2 flex items-center justify-center overflow-hidden text-6xl'>
+            <motion.div className={`w-full font-bold text-7xl flex flex-wrap ${className}`} variants={quote} initial='initial' animate="animate">
+                {text.split(" ").map((word: string, index: number) => (
+                    <motion.span key={index} variants={singleWord}>
+                        {word}&nbsp;
+                    </motion.span>
+                ))}
+            </motion.div>
+        </div>
+    );
+};
+
+export default AnimatedText;

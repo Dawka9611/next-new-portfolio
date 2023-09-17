@@ -20,10 +20,10 @@ const LanguageChanger = () => {
     }
 
     return <div className=" text-dark rounded-full flex justify-center items-center overflow-hidden">
-        {language === 'en' && <div onClick={() => handleChange()} className="">
+        {language === 'en' && <div onClick={handleChange} className="">
             <Image src={eng} alt='EN' className="w-10" />
         </div>}
-        {language === 'mn' && <div onClick={() => handleChange()} className="bg-white text-dark">
+        {language === 'mn' && <div onClick={handleChange} className="bg-white text-dark">
             <Image src={mon} alt='MN'className="w-10"/>
         </div>}
     </div>

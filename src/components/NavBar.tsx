@@ -21,9 +21,9 @@ const NavBar = () => {
                 }
                 )}
             </div>
-            <div className='absolute right-[150px] top-[36px]'>
+            {/* <div className='absolute right-[150px] top-[36px]'>
                 <SocialIcons />
-            </div>
+            </div> */}
             <div className='absolute right-[100px] top-[48px]'>
             <LanguageChanger />
             </div>
