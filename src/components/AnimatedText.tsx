@@ -30,7 +30,7 @@ const singleWord = {
 
 interface AnimatedTextProps {
     text: string,
-    className: string
+    className?: string
 }
 
 const AnimatedText: React.FC<AnimatedTextProps> = ({ text, className }) => {

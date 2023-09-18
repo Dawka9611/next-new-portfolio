@@ -36,7 +36,7 @@ const About = () => {
                         </div>
                     </div>
                 </div>
-                <div className="col-span-2 flex flex-col justify-center items-stretch gap-5 text-4xl pl-8">
+                <div className="col-span-2 flex flex-col justify-center items-stretch gap-5 text-4xl pl-2">
                     <p >
                         <AnimatedNumbers value={50} />+
                         <div className="text-xl"> {translations.users} </div>
@@ -52,9 +52,9 @@ const About = () => {
                 </div>
             </div>
             <Experience />
-            <Education />
             <Courses />
-            <div className="h-96"></div>
+            <Education />
+            <div className="h-12"></div>
         </div>
     </div>
 }
