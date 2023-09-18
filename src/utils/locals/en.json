@@ -18,11 +18,13 @@
     "users": "Clients",
     "ub": "Ulaanbaatar, Mongolia",
     "infosystems": "Infosystems LLC",
-    "position": "Web Developer",
-    "job1": "Collaborate with designers and other developers to create visually appealing and user-friendly web applications.",
-    "job2":"Write clean, maintainable, and efficient code using industry best practices.",
-    "job3": "Implement responsive web designs to ensure optimal user experiences across various devices.",
-    "job4": "Perform testing and debugging to identify and resolve issues promptly.",
-    "job5": "Stay up-to-date with emerging web technologies and trends to continuously improve development processes.",
-    "job6": "Participate in code reviews to maintain code quality and consistency."
+    "positionInfo": "Web Developer",
+    "job1": "Collaborate with designers and other developers to create visually appealing and user-friendly web applications.Write clean, maintainable, and efficient code using industry best practices. Implement responsive web designs to ensure optimal user experiences across various devices.Perform testing and debugging to identify and resolve issues promptly. Stay up-to-date with emerging web technologies and trends to continuously improve development processes.Participate in code reviews to maintain code quality and consistency",
+    "alpha": "Alpha Trans LLC",
+    "positionAlpha": "Logistic Manager",
+    "job2": "As a Logistics Manager, you play a critical role in ensuring the smooth operation of the supply chain, which is essential for the success of the company. Your ability to plan, organize, and adapt to changing circumstances will be key in achieving operational excellence and customer satisfaction",
+    "school":"Mongolian University of Science and Technology ",
+    "profession":"Logistic Management",
+    "edu":"Education",
+    "courses": "Courses end Training"
 }

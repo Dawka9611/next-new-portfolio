@@ -3,7 +3,7 @@ import Detail from "./Detail"
 import { useScroll, motion } from "framer-motion"
 import { useRef } from "react"
 
-const Experience = () => {
+const Education = () => {
     const { translations } = useTranslation()
     const ref = useRef(null)
     const { scrollYProgress } = useScroll({
@@ -13,32 +13,25 @@ const Experience = () => {
 
     return <div className="my-48">
         <h2 className="font-bold text-7xl mb-32 w-full text-start">
-            {translations.experience}
+            {translations.edu}
         </h2>
         <div ref={ref} className="w-full mx-auto relative">
             <motion.div
-            style={{scaleY: scrollYProgress}}
-            className="absolute left-9 top-0 w-[4px] min-h-[100%] bg-white origin-top" />
+                style={{ scaleY: scrollYProgress }}
+                className="absolute left-9 top-0 w-[4px] min-h-[100%] bg-white origin-top" />
             <ul className="w-full flex flex-col items-start justify-between">
                 <Detail
-                    company={translations.infosystems}
-                    position={translations.positionInfo}
-                    companyLink="https://infosystems.mn/"
+                    company={translations.school}
+                    position={translations.profession}
+                    companyLink="https://must.edu.mn/mn//"
                     address={translations.ub}
-                    time="2021/09 - 2023/09"
-                    work={translations.job1}
-                />
-                <Detail
-                    company={translations.alpha}
-                    position={translations.positionAlpha}
-                    companyLink="http://www.alphatrans.mn/"
-                    address={translations.ub}
-                    time="2020/05 - 2021/06"
+                    time="2014 - 2018"
                     work={translations.job2}
+                    className="block !ml-0"
                 />
             </ul>
         </div>
     </div>
 }
 
-export default Experience
+export default Education

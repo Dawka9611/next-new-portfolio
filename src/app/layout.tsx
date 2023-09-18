@@ -30,7 +30,7 @@ export default function RootLayout({
             {/* </div> */}
           </PageStyle>
         </body>
-      </TranslationProvider>z
+      </TranslationProvider>
     </html>
   )
 }
@@ -64,7 +64,6 @@ const PageStyle = styled.div`
     }
     .whiteFrame{
       width: 100%;
-
       &::before{
             content: "";
             width:100%;

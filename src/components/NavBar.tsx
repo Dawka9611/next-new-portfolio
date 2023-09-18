@@ -13,9 +13,9 @@ const NavBar = () => {
         <div className='w-full font-medium flex  items-center p-3'>
             <div className='flex gap-12 text-xl ml-20 '>
                 {navElements.map(el => {
-                    return <Link href={el.link} key={el.text} className={`relative pt-5 group transition hover:text-[#0f9ca1]`}>
+                    return <Link href={el.link} key={el.text} className={`relative pt-5 group transition hover:text-syan`}>
                         {translations[el.text]}
-                        <span className={`textSyan h-[2px] inline-block w-0 absolute left-0 bottom-0 group-hover:w-full bg-[#0f9ca1] transition-[width] ease duration-300 `}></span>
+                        <span className={`textSyan h-[2px] inline-block w-0 absolute left-0 bottom-0 group-hover:w-full bg-syan transition-[width] ease duration-300 `}></span>
                     </Link>
                     // ${router.asPath === el.link ? 'w-full' : 'w-0'}
                 }
